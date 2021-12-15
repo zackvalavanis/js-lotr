@@ -1,3 +1,5 @@
+console.log("Tasks linked.");
+
 // Task 1: Make middle earth
 // To make middle earth, write a function called makeMiddleEarth that returns the string "Hello Middle Earth!".
 

@@ -33,7 +33,7 @@
 //                  '._____|'.\\......'''''''.:..'''
 //     
 
-console.log("Dom Events linked.");
+console.log("Dom events linked.");
 
 // Part 1 - Make middle earth
 
