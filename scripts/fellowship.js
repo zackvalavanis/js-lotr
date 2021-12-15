@@ -1,4 +1,43 @@
+// YOU SHALL NOT MODIFY!
+
+//                                   ....
+//                                 .'' .'''
+// .                             .'   :
+// \\                          .:    :
+//  \\                        _:    :       ..----.._
+//   \\                    .:::.....:::.. .'         ''.
+//    \\                 .'  #-. .-######'     #        '.
+//     \\                 '.##'/ ' ################       :
+//      \\                  #####################         :
+//       \\               ..##.-.#### .''''###'.._        :
+//        \\             :--:########:            '.    .' :
+//         \\..__...--.. :--:#######.'   '.         '.     :
+//         :     :  : : '':'-:'':'::        .         '.  .'
+//         '---'''..: :    ':    '..'''.      '.        :'
+//            \\  :: : :     '      ''''''.     '.      .:
+//             \\ ::  : :     '            '.      '      :
+//              \\::   : :           ....' ..:       '     '.
+//               \\::  : :    .....####\\ .~~.:.             :
+//                \\':.:.:.:'#########.===. ~ |.'-.   . '''.. :
+//                 \\    .'  ########## \ \ _.' '. '-.       '''.
+//                 :\\  :     ########   \ \      '.  '-.        :
+//                :  \\'    '   #### :    \ \      :.    '-.      :
+//               :  .'\\   :'  :     :     \ \       :      '-.    :
+//              : .'  .\\  '  :      :     :\ \       :        '.   :
+//              ::   :  \\'  :.      :     : \ \      :          '. :
+//              ::. :    \\  : :      :    ;  \ \     :           '.:
+//               : ':    '\\ :  :     :     :  \:\     :        ..'
+//                  :    ' \\ :        :     ;  \|      :   .'''
+//                  '.   '  \\:                         :.''
+//                   .:..... \\:       :            ..''
+//                  '._____|'.\\......'''''''.:..'''
+//     
+
+    
+
 console.log("Linked.");
+
+// Part 1 - Make middle earth
 
 var hobbits = [
   'Frodo Baggins',
@@ -24,7 +63,7 @@ function createLandArticle(landName, parentElement) {
   parentElement.appendChild(land);
 }
 
-function makeMiddleEarth() {
+function addMiddleEarth() {
   // creates a section tag with an id of middle-earth
   var middleEarth = document.createElement('section');
 
@@ -37,7 +76,7 @@ function makeMiddleEarth() {
   body.appendChild(middleEarth);
 }
 
-// makeMiddleEarth();
+// addMiddleEarth();
 
 // creates a function to target each land
 function theShire() {
@@ -50,7 +89,7 @@ function mordor() {
   return body.querySelectorAll('article')[2];
 }
 
-// Part 2
+// Part 2 - Put hobbits on the map
 
 function giveHobbitClass(hobbitName, parentElement) {
   var hobbit = document.createElement('li');
@@ -78,7 +117,7 @@ function frodo() {
   return body.querySelectorAll('li')[0];
 }
 
-// Part 3
+// Part 3 - Give Frodo the ring 
 
 function keepItSecretKeepItSafe() {
   // creates a div for 'the-ring'
@@ -95,7 +134,7 @@ function keepItSecretKeepItSafe() {
 // keepItSecretKeepItSafe();
 
 
-// Part 4
+// Part 4 - Make friends
 
 function addFriendToParty(friendName, parentElement) {
   var friend = document.createElement('li');
@@ -125,8 +164,7 @@ function strider() {
   return rivendell().querySelectorAll('li')[3];
 }
 
-// Part 5
-
+// Surprise, Strider is Aragorn!
 
 function beautifulStranger() {
   // change the 'Strider' textnode to 'Aragorn'
@@ -138,7 +176,7 @@ function clickableStrider() {
   strider().addEventListener('click', beautifulStranger);
 }
 
-// Part 6
+// Part 5 - Leave the shire
 
 // creates a target for the hobbits
 function returnHobbits() {
@@ -152,10 +190,10 @@ function leaveTheShire() {
 // leaveTheShire();
 
 
-// Part 7
+// Part 6
 // create a target for the fellowship
 function fellowshipMembers() {
-  return rivendell().querySelectorAll('li');
+  return body.querySelectorAll('li');
 }
 
 function addToFellowship(member, parentElement) {
@@ -176,7 +214,7 @@ function forgeTheFellowShip() {
 }
 // forgeTheFellowShip();
 
-// Part 8
+// Part 7 - Fight the Balrog
 // creates function to target gandalf
 function gandalf() {
   return fellowshipMembers()[0];
@@ -188,128 +226,73 @@ function theBalrog() {
 }
 // theBalrog();
 
-// Part 9
+// Part 8 - Blow the horn of gondor
 // creates a function to target boromir
 function boromir() {
   return fellowshipMembers()[4];
 }
 
 function hornOfGondor() {
-  alert('the horn of gondor has blown');
+  // alert('the horn of gondor has blown');
   // pops up an alert that the horn of gondor has been blown
   boromir().style.textDecoration = 'line-through';
   // Boromir's been killed by the Uruk-hai!
-  // Removes Boromir from the Fellowship
-  // boromir.parentNode.removeChild(boromir);
+  // // Removes Boromir from the Fellowship
+  // boromir().parentNode.removeChild(boromir());
 }
 // hornOfGondor();
 
-// Part 10
+// Part 9 - Frodo and Sam go to Mordor/Mount Doom
 // creates a function to target sam
 function sam() {
   return fellowshipMembers()[0];
 }
 
-function itsDangerousToGoAlone(){
+function goToMordor(){
   // takes Frodo and Sam out of the fellowship and moves them to Mordor
-  mordor().appendChild(frodo());
-  mordor().appendChild(sam());
+  mordor().appendChild(fellowshipMembers()[5]);
+  mordor().appendChild(fellowshipMembers()[5]);
   // adds a div with an id of 'mount-doom' to Mordor
   var mountDoom = document.createElement('div');
   mountDoom.setAttribute('id', 'mount-doom');
   mordor().appendChild(mountDoom);
 }
-// itsDangerousToGoAlone();
+// goToMordor();
 
 
-// Part 11
+// Part 10
 // create variables for gollum and the ring
 var gollum, theRing;
 
-function weWantsIt() {
+function stealRing() {
   // Create a div with an id of 'gollum' and add it to Mordor
   gollum = document.createElement('div');
   gollum.setAttribute('id', 'gollum');
   // Remove the ring from Frodo and give it to Gollum
-  theRing = frodo().querySelector('#the-ring');
+  theRing = fellowshipMembers()[7].querySelector('#the-ring');
   gollum.appendChild(theRing);
   // Move Gollum into Mount Doom
   var mountDoom = mordor().querySelector('#mount-doom');
   mountDoom.appendChild(gollum);
 }
-// weWantsIt();
+// stealRing();
+
+// Part 11
+function victoryLapGoneWrong() {
+  // removes Gollum and the Ring from the document
+  gollum.parentElement.removeChild(gollum);
+}
+// victoryLapGoneWrong();
 
 // Part 12
 
-function thereAndBackAgain() {
-  // removes Gollum and the Ring from the document
-  gollum.parentElement.removeChild(gollum);
-  // remove all the baddies from the document
+function backToTheShire() {
   // Move all the hobbits back to the shire
+  var hobbitUL = document.createElement('ul');
+  var hobbits = body.querySelectorAll('.hobbit');
+  hobbits.forEach(hobbit => {
+    hobbitUL.appendChild(hobbit);
+  });
+  theShire().appendChild(hobbitUL);
 }
-// thereAndBackAgain();
-
-
-
-// TESTING
-function testSayHello(){
-  if(typeof sayHello === "function"){
-    if (sayHello() === "Hello Middle Earth!") {
-      makeMiddleEarth();
-    } else {
-      console.log("Your sayHello function is returning the wrong value");
-    }
-  } else {
-    console.log("You need a sayHello function!");
-  }
-}
-
-function testTakeAttendance() {
-  if(typeof takeAttendance === "function"){
-    if (takeAttendance() === 4) {
-      makeHobbits();
-    } else {
-      console.log("Your takeAttendance function is returning the wrong value");
-    }
-  } else {
-    console.log("You need a takeAttendance function!");
-  }
-}
-
-function testKeepSecret() {
-  if(typeof keepSecret === "function"){
-    if (keepSecret("FRODO") === "frodo" && keepSecret("THE RING") === "the ring") {
-      keepItSecretKeepItSafe();
-    } else {
-      console.log("Your keepSecret function is returning the wrong value");
-    }
-  } else {
-    console.log("You need a keepSecret function!");
-  }
-}
-
-function testDoubleParty() {
-  if(typeof doubleParty === "function"){
-    if (doubleParty() === 8) {
-      makefriends();
-      clickableStrider();
-    } else {
-      console.log("Your doubleParty function is returning the wrong value");
-    }
-  } else {
-    console.log("You need a doubleParty function!");
-  }
-}
-
-function testDeclareAllegiance() {
-  if(typeof declareAllegiance === "function"){
-    if (declareAllegiance('Frodo') === "I, Frodo, am part of the fellowship!") {
-      leaveTheShire();
-      forgeTheFellowShip();
-    } else {
-      console.log("Your declareAllegiance function is returning the wrong value");
-    }
-  } else {
-    console.log("You need a declareAllegiance function!");
-  }
-}
+// backToTheShire();
