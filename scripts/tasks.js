@@ -1,3 +1,5 @@
+/* global testMakeMiddleEarth, testTakeAttendance, testKeepSecret, testDoubleParty, testTravelAbroad, testDeclareAllegiance, testSlayTheBalrog, testBlowTheHornOfGondor, testItsDangerousToGoAlone, testWeWantsIt, testWrestleGollum, testThereAndBackAgain */
+
 console.log("Tasks linked.");
 
 // Task 1: Make middle earth
