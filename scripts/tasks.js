@@ -134,7 +134,7 @@ function weWantsIt() {
 
 
 // Task 11: Vanquish Gollum and destroy the Ring
-// To send Gollum and the Ring into the lava of Mount Doom, write a function called wrestleGollum. The function should use a for loop (docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration) to loop 5 times and increase a variable
+// To send Gollum and the Ring into the lava of Mount Doom, write a function called wrestleGollum. The function should define a number initially set to zero, then use a for loop (docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration) to loop 5 times and increase the number by 1 each time
 
 // WRITE YOUR CODE HERE
 
