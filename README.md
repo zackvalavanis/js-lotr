@@ -1,1 +1,1 @@
-![One does not simply](https://imgur.com/a/TasKOe8)
+![One does not simply](https://i.imgur.com/3cstOVs.png)
