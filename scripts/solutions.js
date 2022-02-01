@@ -56,7 +56,7 @@ testDoubleParty();
 // click on Strider to see a transformation!
 
 // Task 5: Leave the Shire
-// To move the hobbits to Rivendell, complete the travelAbroad function below. Write a loop that goes through the shire array and for each hobbit do the following: First pop each hobbit out of the shire array (docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop), and then push each hobbit into the rivendell array (docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push). Have the function return the rivendell array, which should now contain all the hobbits!
+// To move the hobbits to Rivendell, complete the travelAbroad function below. Write a loop (research the JavaScript forEach method) that goes through the shire array and for each hobbit do the following: First unshift each hobbit out of the shire array (docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift), and then push each hobbit into the rivendell array (docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push). Have the function return the rivendell array, which should now contain all the hobbits!
 
 function travelAbroad() {
   var shire = ['Frodo Baggins', 'Samwise Gamgee', 'Merry Brandybuck', 'Pippin Took']
@@ -73,7 +73,7 @@ function travelAbroad() {
 testTravelAbroad();
 
 // Task 6: Forge the fellowship
-// To forge the fellowship, write a function called declareAllegiance that takes in a member (a string, such as 'Sam') and concatenates it into a string to return "I, Sam, am part of the fellowship!"
+// To forge the fellowship, write a function called declareAllegiance that takes in a member as a parameter (a string, such as 'Sam') and concatenates it into a string to return "I, Sam, am part of the fellowship!"
 
 // WRITE YOUR CODE HERE
 function declareAllegiance(member) {

@@ -4,10 +4,12 @@ console.log("Tasks linked.");
 // To make middle earth, write a function called makeMiddleEarth that returns the string "Hello Middle Earth!".
 
 // WRITE YOUR CODE HERE
-
+function makeMiddleEarth() {
+  return "Hello Middle Earth!";
+}
 
 // TESTING TASK 1
-// testMakeMiddleEarth();
+testMakeMiddleEarth();
 
 // Task 2: Put hobbits on the map
 // To add the hobbits to The Shire, write a function called takeAttendance that returns the length of the 'hobbits' array.
@@ -46,7 +48,7 @@ var partySize = 4;
 // click on Strider to see a transformation!
 
 // Task 5: Leave the Shire
-// To move the hobbits to Rivendell, complete the travelAbroad function below. Write a loop that goes through the shire array and for each hobbit do the following: First pop each hobbit out of the shire array (docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop), and then push each hobbit into the rivendell array (docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push). Have the function return the rivendell array, which should now contain all the hobbits!
+// To move the hobbits to Rivendell, complete the travelAbroad function below. Write a loop (research the JavaScript forEach method) that goes through the shire array and for each hobbit do the following: First unshift each hobbit out of the shire array (docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift), and then push each hobbit into the rivendell array (docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push). Have the function return the rivendell array, which should now contain all the hobbits!
 
 function travelAbroad() {
   var shire = ['Frodo Baggins', 'Samwise Gamgee', 'Merry Brandybuck', 'Pippin Took']
