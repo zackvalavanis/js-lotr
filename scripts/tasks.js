@@ -4,12 +4,9 @@ console.log("Tasks linked.");
 // To make middle earth, write a function called makeMiddleEarth that returns the string "Hello Middle Earth!".
 
 // WRITE YOUR CODE HERE
-function makeMiddleEarth() {
-  return "Hello Middle Earth!";
-}
 
 // TESTING TASK 1
-testMakeMiddleEarth();
+// testMakeMiddleEarth();
 
 // Task 2: Put hobbits on the map
 // To add the hobbits to The Shire, write a function called takeAttendance that returns the length of the 'hobbits' array.
