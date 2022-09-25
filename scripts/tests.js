@@ -31,14 +31,16 @@
 //                  '.   '  \\:                         :.''
 //                   .:..... \\:       :            ..''
 //                  '._____|'.\\......'''''''.:..'''
-//     
+//
+
+/* global makeMiddleEarth, addMiddleEarth, takeAttendance, makeHobbits, keepSecret, keepItSecretKeepItSafe, doubleParty, makefriends, clickableStrider, travelAbroad, leaveTheShire, declareAllegiance, forgeTheFellowShip, rivendell, hobbitTheme, slayTheBalrog, theBalrog, blowTheHornOfGondor, hornOfGondor, itsDangerousToGoAlone, goToMordor, gollumHasRing, stealRing, wrestleGollum, victoryLapGoneWrong, thereAndBackAgain, backToTheShire */
 
 console.log("Tests linked.");
 
 // TESTING
 // Task 1
-function testMakeMiddleEarth(){
-  if(typeof makeMiddleEarth === "function"){
+function testMakeMiddleEarth() {
+  if (typeof makeMiddleEarth === "function") {
     if (makeMiddleEarth() === "Hello Middle Earth!") {
       addMiddleEarth();
       console.log("Task 1 completed! Middle Earth has been created.");
@@ -52,7 +54,7 @@ function testMakeMiddleEarth(){
 
 // Task 2
 function testTakeAttendance() {
-  if(typeof takeAttendance === "function"){
+  if (typeof takeAttendance === "function") {
     if (takeAttendance() === 4) {
       makeHobbits();
       console.log("Task 2 completed! Hobbits are in the shire.");
@@ -66,7 +68,7 @@ function testTakeAttendance() {
 
 // Task 3
 function testKeepSecret() {
-  if(typeof keepSecret === "function"){
+  if (typeof keepSecret === "function") {
     if (keepSecret("FRODO") === "frodo" && keepSecret("THE RING") === "the ring") {
       keepItSecretKeepItSafe();
       console.log("Task 3 completed! Frodo has the ring. Click on it to hear something sinister...");
@@ -80,7 +82,7 @@ function testKeepSecret() {
 
 // Task 4
 function testDoubleParty() {
-  if(typeof doubleParty === "function"){
+  if (typeof doubleParty === "function") {
     if (doubleParty() === 8) {
       makefriends();
       clickableStrider();
@@ -95,9 +97,13 @@ function testDoubleParty() {
 
 // Task 5
 function testTravelAbroad() {
-  if(typeof travelAbroad === "function"){
+  if (typeof travelAbroad === "function") {
     var rivenDellHobbits = travelAbroad();
-    if (typeof rivenDellHobbits === "object" && rivenDellHobbits.length === 4 && rivenDellHobbits.includes('Frodo Baggins')) {
+    if (
+      typeof rivenDellHobbits === "object" &&
+      rivenDellHobbits.length === 4 &&
+      rivenDellHobbits.includes("Frodo Baggins")
+    ) {
       leaveTheShire();
       console.log("Task 5 completed! The hobbits are headed to Rivendell!");
     } else {
@@ -110,12 +116,12 @@ function testTravelAbroad() {
 
 // Task 6
 function testDeclareAllegiance() {
-  if(typeof declareAllegiance === "function"){
-    if (declareAllegiance('Frodo') === "I, Frodo, am part of the fellowship!") {
+  if (typeof declareAllegiance === "function") {
+    if (declareAllegiance("Frodo") === "I, Frodo, am part of the fellowship!") {
       console.log("Task 6 completed! The fellowship has been forged! Click on Rivendell to hear a tune!");
       forgeTheFellowShip();
-      rivendell().firstChild.setAttribute('class', 'the-fellowship');
-      rivendell().firstChild.addEventListener('click', hobbitTheme);
+      rivendell().firstChild.setAttribute("class", "the-fellowship");
+      rivendell().firstChild.addEventListener("click", hobbitTheme);
     } else {
       console.log("Your declareAllegiance function is returning the wrong value. Check for typos!");
     }
@@ -126,7 +132,7 @@ function testDeclareAllegiance() {
 
 // Task 7
 function testSlayTheBalrog() {
-  if(typeof slayTheBalrog === "function"){
+  if (typeof slayTheBalrog === "function") {
     if (slayTheBalrog() === "Gandalf the Grey says: You shall not pass! Gandalf the Grey is now Gandalf the white.") {
       console.log("Task 7 completed! Gandalf has slayed the Balrog, check out his new name!");
       theBalrog();
@@ -140,7 +146,7 @@ function testSlayTheBalrog() {
 
 // Task 8
 function testBlowTheHornOfGondor() {
-  if(typeof blowTheHornOfGondor === "function"){
+  if (typeof blowTheHornOfGondor === "function") {
     if (blowTheHornOfGondor() === "Boromir has blown the Horn of Gondor!") {
       console.log("Task 8 completed! Boromir has blown the horn...and been killed by the Uruk-hai!");
       hornOfGondor();
@@ -154,8 +160,12 @@ function testBlowTheHornOfGondor() {
 
 // Task 9
 function testItsDangerousToGoAlone() {
-  if(typeof itsDangerousToGoAlone === "function"){
-    if (typeof itsDangerousToGoAlone() === "object" && itsDangerousToGoAlone()[0] === 'Frodo Baggins' && itsDangerousToGoAlone()[1] === 'Samwise Gamgee') {
+  if (typeof itsDangerousToGoAlone === "function") {
+    if (
+      typeof itsDangerousToGoAlone() === "object" &&
+      itsDangerousToGoAlone()[0] === "Frodo Baggins" &&
+      itsDangerousToGoAlone()[1] === "Samwise Gamgee"
+    ) {
       console.log("Task 9 completed! Frodo and Sam have entered Mordor. Mount Doom is near!");
       goToMordor();
     } else {
@@ -168,7 +178,7 @@ function testItsDangerousToGoAlone() {
 
 // Task 10
 function testWeWantsIt() {
-  if(typeof weWantsIt === "function"){
+  if (typeof weWantsIt === "function") {
     if (gollumHasRing) {
       console.log("Task 10 completed! The precious has been acquired...");
       stealRing();
@@ -182,7 +192,7 @@ function testWeWantsIt() {
 
 // Task 11
 function testWrestleGollum() {
-  if(typeof wrestleGollum === "function"){
+  if (typeof wrestleGollum === "function") {
     if (wrestleGollum() === 5) {
       console.log("Task 11 completed! Gollum has been vanquished and the ring destroyed!");
       victoryLapGoneWrong();
@@ -197,8 +207,14 @@ function testWrestleGollum() {
 // Task 12
 function testThereAndBackAgain() {
   var shireHobbits = thereAndBackAgain();
-  if(typeof thereAndBackAgain === "function"){
-    if (typeof thereAndBackAgain() === "object" && shireHobbits[0].name === 'Frodo Baggins' && shireHobbits[0].location === 'The Shire' && shireHobbits[3].name === 'Pippin Took' && shireHobbits[3].location === 'The Shire') {
+  if (typeof thereAndBackAgain === "function") {
+    if (
+      typeof thereAndBackAgain() === "object" &&
+      shireHobbits[0].name === "Frodo Baggins" &&
+      shireHobbits[0].location === "The Shire" &&
+      shireHobbits[3].name === "Pippin Took" &&
+      shireHobbits[3].location === "The Shire"
+    ) {
       console.log("Task 12 completed! The hobbits have made it safely back to The Shire and saved Middle Earth!");
       backToTheShire();
     } else {
