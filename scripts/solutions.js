@@ -60,14 +60,13 @@ testDoubleParty();
 // click on Strider to see a transformation!
 
 // Task 5: Leave the Shire
-// To move the hobbits to Rivendell, complete the travelAbroad function below. Write a loop (research the JavaScript forEach method) that goes through the shire array and for each hobbit do the following: First shift each hobbit out of the shire array (docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift), and then push each hobbit into the rivendell array (docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push). Have the function return the rivendell array, which should now contain all the hobbits!
+// To move the hobbits to Rivendell, complete the travelAbroad function below. Write a loop (research the JavaScript forEach method) that goes through the shire array and pushes each hobbit into the rivendell array (docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push). Have the function return the rivendell array, which should now contain all the hobbits!
 
 function travelAbroad() {
   var shire = ["Frodo Baggins", "Samwise Gamgee", "Merry Brandybuck", "Pippin Took"];
   var rivendell = [];
   // WRITE YOUR CODE HERE
   shire.forEach((hobbit) => {
-    shire.shift();
     rivendell.push(hobbit);
   });
   return rivendell;
